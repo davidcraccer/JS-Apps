@@ -1,0 +1,204 @@
+html, body {
+    padding: 0;
+    font-family: Inter;
+    min-width: 550px;
+}
+*{
+    margin: 0;
+}
+
+/** figma.com/file/jhFRdFIdHpRxsDznNXtpXw/Movie-Watchlist?node-id=2%3A17&t=pP06xG3nEgVrO6FP-0
+*/
+
+header{
+    background-image: url(/images/background-img.png);
+    background-size:cover;
+    height: 208px;
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-shadow: 1px 1px 8px  white;
+}
+header div{
+
+width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 46px 0 42px;
+}
+header a{
+    display: inline;
+    color: black;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: right;
+    text-decoration: none;
+
+}
+header h1{
+    margin: 0;
+        color: black;
+    font-size: 43px;
+    font-weight: 800;
+    line-height: 24px;
+    letter-spacing: -0.045em;
+    text-align: justified;
+
+}
+
+.search-container{
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+    margin-bottom: 44px ;
+
+
+}
+
+
+.search-container input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.search-container input{
+    padding: 9px 176px 9px 41px;
+    background: #FFFFFF url(/images/search-icon.png) no-repeat 15px center;
+    border: 1px solid #D1D5DB;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px 0px 0px 6px;
+    color: #6B7280;
+    height: 38px;
+    
+    
+}
+.search-container button{
+    border: 1px solid #D1D5DB;
+    background:linear-gradient(0deg, #F9FAFB, #F9FAFB);
+    padding: 9px 11px 9px 17px;
+    width: 120px;
+    height: 38px;
+    border: 1px solid #D1D5DB;
+    border-radius: 0px 6px 6px 0px;
+    color:#374151;
+    
+
+
+}
+
+.start-exploring{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #DFDDDD;
+    margin-top: 193px;
+}
+.start-exploring h2{
+    margin-top: 8px;
+}
+.no-search{
+    color: #DFDDDD;
+    margin: 193px 115px;
+    text-align: center;
+
+}
+/*render when searched*/
+.hidden{
+    display: none;
+}
+
+/*couldve done with grid*/
+.hero, .text-holder, .title-rating, .time-genre, .add-watchlist, .remove-watchlist{
+    display: flex;
+}
+
+.title-rating, .time-genre, .add-watchlist, .remove-watchlist{
+    align-items: center;
+}
+
+.hero{
+    gap: 21px;
+    margin: 21px 44px 0;
+    padding-bottom: 21px;
+    border-bottom: 1.5px solid #E5E7EB ;
+}
+.text-holder{
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+.hero .poster{
+    width: 99px;
+    min-width: 99px;
+    height: 147.41099548339844px;
+    border-radius: 2.329411506652832px;
+    object-fit:cover;
+
+
+}
+/*icons*/
+.title-rating img, .time-genre img{
+    width: 15px;
+    height: 15px;
+    margin: 0 5px 0 8px;
+}
+
+/*icons*/
+
+.time-genre h5{
+    margin-right:19px;
+}
+
+
+.title-rating{
+font-size: 18px;
+font-weight: 500;
+line-height: 25px;
+
+}
+.time-genre{
+    color: #111827;
+font-size: 12px;
+font-weight: 400;
+line-height: 20px;
+text-align: left;
+
+
+}
+.hero p{
+    color: #6B7280;
+font-size: 14px;
+font-weight: 400;
+line-height: 20px;
+text-align: left;
+}
+
+
+
+/* my watchlist*/
+.start-exploring div{
+    margin-top: 15px ;
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    color: #363636;
+}
+.start-exploring a {
+    text-decoration: none;
+  }
+  
+
+
+.remove-watchlist:hover, .add-watchlist:hover, .search-container button:hover {
+    cursor: pointer;
+}
+
+
