@@ -1,0 +1,210 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Smythe', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+.flex{
+    display: flex;
+}
+
+header, .checkout, .menu{
+    min-width: 600px;
+}
+
+header{
+    background: url(/images/ferks-guare-KEZdWfYD-ow-unsplash\ 1.png) no-repeat;
+    color: white;
+    padding: 46px;
+}
+
+header h3{
+    margin: 0 0 0.5em;
+}
+
+.menu{
+    padding: 46px;
+}
+
+
+.item{
+    align-items: center;
+    justify-content: space-between;
+    padding:  45px 0 51px 0 ;
+    border-bottom: 1px solid #D2D2D2
+
+}
+
+.item:first-child{
+    padding-top: 0;
+}
+
+.item h1{
+    margin: 0 31px 0 0;
+    font-family: Inter;
+    font-size: 5em;
+    
+    
+}
+.item-name{
+font-size: 28px;
+font-weight: 400;
+line-height: 17px;
+
+}
+
+
+.item .text{
+    flex-direction: column;
+    gap: 8px;
+}
+
+.item .description{
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+color: #8B8B8B;
+
+}
+
+.item-price{
+font-size: 20px;
+font-weight: 400;
+line-height: 24px;
+
+}
+
+.item .add-btn{
+font-size: 32px;
+font-weight: 200;
+
+height: 50px;
+width: 50px;
+margin-right: 0;
+
+border-radius: 50%;
+border: 1.5px solid #DEDEDE;
+align-items: center;
+justify-content: center;
+
+}
+
+
+
+.checkout{
+    padding: 46px;
+}
+.hidden{
+    display: none;
+}
+.checkout-title{
+    font-size: 28px;
+    line-height: 17px;
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+
+.checkout-item{
+    justify-content: space-between;
+    margin-top: 22px;
+
+}
+.checkout-item .remove{
+    border: none;
+    background: none;
+    display: inline;
+    color: #BBBBBB;
+    margin-left: 13px;
+}
+
+.checkout-items{
+    padding-bottom: 31px;
+    border-bottom: 2px solid #393333;
+    margin-bottom: 14px;
+}
+
+.checkout .total-price{
+    justify-content: space-between;
+    margin-bottom: 53px;
+    color: #0E0E0E;
+
+}
+
+.buy-btn{
+    font-family: Verdana;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    background: #16DB99;
+    border: none;
+    border-radius: 3px;
+    display: inline;
+    padding: 11px;
+    color: white;
+    width: 100%;
+}
+
+
+.payment{
+    font-family: Verdana;
+
+    position: fixed;
+    top: 20vh;
+
+    max-width: 510px;
+    margin: 0 46px;
+    padding: 47px 23px 30px;
+
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 0 0 0px 5000px rgba(0, 0, 0, 0.5);
+}
+
+.payment h3{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31px;
+    margin-bottom: 46px;
+}
+
+.payment input{
+    display: inline-block;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5em;
+    padding: 5px 10px;
+    margin: 23px 0 0 ;
+    border: 1.3px solid #757575;
+    border-radius: 3.88991px;
+}
+
+.payment .buy-btn{
+    padding: 16px 0;
+    margin-top: 46px;
+}
+
+.thanks{
+padding: 46px;
+width: 100%;
+}
+.thanks h2{
+    color: #065F46;
+    background: #ECFDF5;
+    text-align: center;
+    width: 100%;
+    padding: 50px 0;
+    margin-bottom: 100px;
+}
+
+
+.buy-btn:hover, .add-btn:hover, .remove:hover{
+    cursor: pointer;
+}
