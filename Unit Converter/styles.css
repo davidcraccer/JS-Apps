@@ -1,0 +1,158 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: inter, sans-serif;
+    text-align: center;
+}
+
+body{
+    background: #F4F4F4;
+}
+
+.header{
+    background: #6943FF;
+    color: white;
+    padding: 33px 0 ;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center ;
+
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 38px;
+}
+
+.header input{
+    border: 2px solid #B295FF;
+    text-align: center;
+    height: 83px;
+    width: 117px;
+    border-radius: 5px;
+    background: none;
+    color: white;
+    margin: 30px 0 25px ;
+
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 24px;
+}
+.header input:focus{
+    outline: none;
+}
+.header input::placeholder{
+    color: #767676ac;
+}
+
+
+.header button{
+    background: white;
+    border: none;
+    padding: 9px 27px;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+    border-radius: 5px;
+    
+    font-size: 16px;    
+    font-weight: 500;   
+    line-height: 24px;  
+}
+
+.header button:hover{
+    background-color: rgba(255, 255, 255, 0.826);
+    cursor:pointer;
+}
+
+.header button:active{
+    transform:scale(98%);
+}
+.hero{
+    padding: 24px 25px;
+
+}
+
+.unit-holder{
+    background-color: white;
+    padding: 21px 0 19px ;
+    margin: 23px 0;
+    border-radius: 5px;
+}
+.unit-holder .convert-line{
+    display: inline;
+}
+.unit-holder h3{
+    margin: 0 0 9px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+
+}
+
+.unit-holder p{
+    color: #353535;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+
+}
+
+@media (max-width: 576px){
+    .header{
+        font-size: 18px;
+
+        line-height: 28px;
+    }
+
+    .header span{
+        display: block;
+    }
+
+    .header input{
+        margin: 15px 0 19px;
+        height: 60px;
+        width: 80px;
+        font-size: 20px;
+    }
+    
+    .header button{
+        padding: 4px 14px;
+        font-size: 14px;
+    }
+    .hero{
+        padding: 0 16px;
+    }
+    .unit-holder{
+        padding: 16px 10px 7px;
+    }
+    .unit-holder h3{
+        font-size: 16px;
+        margin: 0 0 10px;
+        text-decoration: underline;
+    }
+    .unit-holder .hidden{
+        display: none;
+    }
+    .unit-holder .convert-line{
+        display: block;
+        margin: 4px;
+    }
+}
+
+@media (min-width: 768px) {
+    body{
+        display: flex;
+    }
+
+    .header, .hero{
+        height: 100vh;
+        width: 100vw;
+
+    }
+    .hero{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+}
