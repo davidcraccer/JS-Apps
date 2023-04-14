@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    width: 360px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F6F7FB 100%);
+    margin: 0 auto;
+    user-select: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 23px 19px;
+}
+
+header img{
+    width: 34px;
+    height: 34px;
+}
+
+#logo{
+    Width: 84px;
+    Height: 42px;
+}
+
+.dog{
+    position: relative;
+    margin: 0 8px;
+}
+.dog img{
+    height: 500px;
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+
+    
+}
+
+.dog .text{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    margin: 0 12px 16px;
+    font-family: Poppins;
+}
+.dog .name{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #F8F8F8;
+
+}
+
+.dog .bio{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #B7B7B7;
+}
+
+.dog .badge{
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    object-fit: contain;
+    height: 76.26363216298239px;
+    width: 193.91134328682563px;
+    transform: rotate(-30deg);
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 24px 0;
+    
+}
+
+.buttons > div{
+    padding: 20px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0px 10px 20px 0px #E9E9EA;
+}
+
+.buttons > div > img{
+    height: 25.875px;
+    width: 25.875px;
+}
+
+.buttons > div:hover{
+    cursor: pointer;
+}
+
+.buttons > .dislike-btn:hover{
+    background: #FFE7EF;
+    box-shadow: 0px 10px 20px 0px #EDD9DF;
+}
+.buttons > .like-btn:hover{
+    background: #DBFFF4;
+    box-shadow: 0px 10px 20px 0px #CCF1E6;
+}
