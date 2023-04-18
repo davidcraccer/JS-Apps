@@ -1,0 +1,113 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: whitesmoke;
+}
+body{
+    margin: 0 auto;
+    width: 550px;
+    font-family: Inter;
+}
+header{
+    box-shadow: 0px 4px 11px 0px #00000026;
+    position: fixed;
+    width: 100%;
+    max-width: 550px;
+    top: 0;
+    background-color: white;
+}
+
+
+  
+form{
+    padding: 23px 15px 25px 19px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.color-shown{
+    background-color: #F55A5A;
+    height: 34px;
+    min-width: 51px;
+    border: 0.5px solid #313131;
+    outline: 5px solid #D1D5DB;
+    margin-right: 17px;
+}
+
+select#color-schemes{
+    appearance: none;
+    background-image: url('Icon.png');
+    background-size: 14px 7px ;
+    background-position: right 15px center;
+    background-repeat: no-repeat;
+
+    padding: 9px 37px 9px 13px;
+    height: 42px;
+    width: 312px;
+
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+#cta-btn {
+    background-color: white;
+    border: 1px solid #D1D5DB;
+    color: #374151;
+
+    margin-left: 13px;
+    height: 42px;
+    width: 123px;
+    min-width: 90px;
+    padding: 0 11px;
+    border-radius: 4px;
+
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+}
+#cta-btn:hover, #color-schemes:hover{
+    cursor: pointer;
+}
+
+#cta-btn:focus {
+    transform: scale(1);
+}
+#cta-btn:active {    
+    transform: scale(0.98);
+
+}
+
+.hero{
+    display: flex;
+}
+
+.color-container{
+    width: 20%;
+    height: 94vh;
+
+}
+.color{
+    height: 100%;
+}
+.color-hex{
+    background-color: white;
+    color: #2B283A;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+
+}
+
+.color-hex{
+    padding: 11px 0;
+}
+

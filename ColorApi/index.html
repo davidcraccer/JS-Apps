@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <style></style>
+    <title>Color Generator</title>
+</head>
+<body>
+    <header>
+        <form>
+            <div class="color-shown"></div>
+            <label for="color-schemes"></label>
+            <select name="color-schemes" id="color-schemes">
+                <option value="monochrome" selected>Monochrome</option>
+                <option value="monochrome-dark">Monochrome-dark</option>
+                <option value="monochrome-light">Monochrome-light</option>
+                <option value="analogic">Analogic</option>
+                <option value="complement">Complement</option>
+                <option value="analogic-complement">Analogic-complement</option>
+                <option value="triad">Triad</option>
+            </select>
+            <button id='cta-btn' type="submit">Get color scheme</button>
+        </form>
+    </header>
+
+    <section class="hero">
+        <div class="color-container">
+            <div class="color"></div>
+            <p class="color-hex">#F55A5A</p>
+        </div>
+        <div class="color-container">
+            <div class="color"></div>
+            <p class="color-hex">#F55A5A</p>
+        </div>
+        <div class="color-container">
+            <div class="color"></div>
+            <p class="color-hex">#F55A5A</p>
+        </div>
+        <div class="color-container">
+            <div class="color"></div>
+            <p class="color-hex">#F55A5A</p>
+        </div>
+        <div class="color-container">
+            <div class="color"></div>
+            <p class="color-hex">#F55A5A</p>
+        </div>
+    </section>
+</body>
+<script src="index.js"></script>
+</html>
