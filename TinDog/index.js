@@ -8,6 +8,7 @@ const dislikeBtn = document.querySelector('.dislike-btn')
 let currentDog
 
 renderNewDog()
+
 likeBtn.addEventListener('click', () => {
     console.log(currentDog)
         currentDog.like()
@@ -28,7 +29,6 @@ dislikeBtn.addEventListener('click', () => {
 function renderNewDog(){
     const dog = dogs.find(dog => !dog.hasBeenSwiped)
     if (!dog) return;
-    dog.hasBeenSwiped = true
     currentDog = new Dog(dog)
     renderDogsContainer.innerHTML = currentDog.renderDog()
 }
