@@ -21,8 +21,6 @@ header{
     top: 0;
     background-color: white;
 }
-
-
   
 form{
     padding: 23px 15px 25px 19px;
@@ -33,13 +31,37 @@ form{
 }
 
 .color-shown{
-    background-color: #F55A5A;
+    background-color: #2B283A;
     height: 34px;
     min-width: 51px;
+    max-width: 60px;
     border: 0.5px solid #313131;
     outline: 5px solid #D1D5DB;
     margin-right: 17px;
 }
+
+.color-shown #color-input{
+    background-color: transparent;
+    border: none;
+    height: 34px;
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 100vw #2B283A inset !important;
+    -webkit-text-fill-color: whitesmoke;
+}
+
+#color-input:active, #color-input:focus{
+    outline: none;
+}
+
+
 
 select#color-schemes{
     appearance: none;
@@ -73,7 +95,7 @@ select#color-schemes{
     font-weight: 500;
     line-height: 16px;
 }
-#cta-btn:hover, #color-schemes:hover{
+#cta-btn:hover, #color-schemes:hover, .color-shown:hover{
     cursor: pointer;
 }
 
@@ -98,6 +120,7 @@ select#color-schemes{
     height: 100%;
 }
 .color-hex{
+    display: none;
     background-color: white;
     color: #2B283A;
     font-size: 12px;
