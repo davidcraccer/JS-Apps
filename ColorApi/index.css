@@ -30,37 +30,30 @@ form{
 
 }
 
-.color-shown{
-    background-color: #2B283A;
+.color-shown {
     height: 34px;
     min-width: 51px;
     max-width: 60px;
-    border: 0.5px solid #313131;
+    border: 0px solid #313131;
     outline: 5px solid #D1D5DB;
+
     margin-right: 17px;
 }
 
-.color-shown #color-input{
+#color-input{
     background-color: transparent;
     border: none;
     height: 34px;
     width: 100%;
-    text-align: center;
-    color: whitesmoke;
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active{
-    -webkit-box-shadow: 0 0 0 100vw #2B283A inset !important;
-    -webkit-text-fill-color: whitesmoke;
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
 }
 
-#color-input:active, #color-input:focus{
-    outline: none;
+#color-input:hover{
+    cursor: pointer;
 }
-
 
 
 select#color-schemes{
@@ -120,7 +113,6 @@ select#color-schemes{
     height: 100%;
 }
 .color-hex{
-    display: none;
     background-color: white;
     color: #2B283A;
     font-size: 12px;
