@@ -60,6 +60,13 @@ header a{
     color: #6B7280;
 
 }
+.read-more{
+font-size: 12px;
+font-weight: 400;
+line-height: 20px;
+color: #272727;
+
+}
 
 /* Layout */
 a {
@@ -174,6 +181,13 @@ header a{
     flex-direction: column;
 }
 
+.poster{
+    height: 147.41099548339844px;
+width: 99px;
+border-radius: 2.329411506652832px;
+
+}
+
 .top-movie, .middle-movie, .add-btn{
     align-items: center;
 }
@@ -229,7 +243,7 @@ header, .empty-hero{
     text-underline-offset: 4px;
 }
 
-.add-btn:hover{
+.add-btn:hover, .read-more:hover{
     text-decoration: underline 1px #0e1111;
     text-underline-offset: 2px;
     cursor: pointer;
