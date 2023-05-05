@@ -188,7 +188,7 @@ border-radius: 2.329411506652832px;
 
 }
 
-.top-movie, .middle-movie, .add-btn{
+.top-movie, .middle-movie, .add-btn, .remove-btn{
     align-items: center;
 }
 
@@ -203,7 +203,7 @@ border-radius: 2.329411506652832px;
     margin: 0 30px 0 15px;
 }
 
-.add-btn{
+.add-btn, .remove-btn{
     gap: 5px;
 }
 
@@ -243,7 +243,7 @@ header, .empty-hero{
     text-underline-offset: 4px;
 }
 
-.add-btn:hover, .read-more:hover{
+.add-btn:hover, .remove-btn:hover, .read-more:hover{
     text-decoration: underline 1px #0e1111;
     text-underline-offset: 2px;
     cursor: pointer;
