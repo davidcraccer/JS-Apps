@@ -248,3 +248,10 @@ header, .empty-hero{
     text-underline-offset: 2px;
     cursor: pointer;
 }
+
+.add-btn:active, .remove-btn:active{
+    transform: scale(99%);
+}
+.add-btn:focus, .remove-btn:focus{
+    transform: scale(100%);
+}

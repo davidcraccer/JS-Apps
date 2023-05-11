@@ -1,25 +1,6 @@
 const baseURL = "http://www.omdbapi.com/?apikey=a80cae51"
 const searchInput = document.querySelector('#search-input')
-
-
-
-searchInput.addEventListener('keyup', async () => {
-    renderMovies()
-})
-
-
-async function renderMovies(){
-    document.querySelector('.hero').innerHTML = ''
-
-    let endpointURL = `&s=${searchInput.value}`
-    const data = await getData(endpointURL)
-
-    data.Search.forEach(async movie => {
-        endpointURL = `&i=${movie.imdbID}`
-        const newData = await getData(endpointURL)
-        renderMoviesHTML(newData)
-    })
-}
+const searchForm = document.querySelector('#search-form')
 
 async function getData(endpointURL){
     try {
@@ -31,6 +12,28 @@ async function getData(endpointURL){
         console.error(err)
     }
 }
+
+
+if(window.location.pathname === "/index.html"){
+    searchForm.addEventListener('submit', async (e) => {
+        e.preventDefault()
+        renderMovies()
+    })
+}
+
+async function renderMovies(){
+    document.querySelector('.hero').innerHTML = ''
+
+    let endpointURL = `&s=${searchInput.value}`
+    const data = await getData(endpointURL)
+    data.Search.forEach(async movie => {
+        endpointURL = `&i=${movie.imdbID}`
+        const newData = await getData(endpointURL)
+        renderMoviesHTML(newData)
+    })
+    toggleHiddenSearch(data)
+}
+
 
 
 function renderMoviesHTML(data){
@@ -57,12 +60,12 @@ function renderMoviesHTML(data){
             </div>
         </div>
         `
+    
 }
 renderMyWatchlist()
 function renderMyWatchlist(){
     let watchlist = JSON.parse(localStorage.getItem('watchlist'))
-    console.log(watchlist)
-
+    
     watchlist.forEach((movie, index) => {
         const { Poster, Title, Rating, Runtime, Genre, Plot } = movie
         document.querySelector('#hero-watchlist').innerHTML += `
@@ -87,15 +90,18 @@ function renderMyWatchlist(){
         </div>
         `
     })
+    toggleHiddenWatchlist(watchlist)
+    
 }
+
 function removeFromWatchList(index){
     let watchlist = JSON.parse(localStorage.getItem('watchlist'))
     watchlist.splice(index, 1)
     localStorage.setItem('watchlist', JSON.stringify(watchlist))
     document.querySelector('#hero-watchlist').innerHTML = ''
     renderMyWatchlist()
-
 }
+
 function addToWatchList(element){
     const movieEl = element.closest('.movie')
     const titleEl = movieEl.querySelector('.title')
@@ -137,3 +143,19 @@ function renderFullDescription(element) {
     element.style.display = 'none'
 }
 
+
+function toggleHiddenSearch(data){
+    if(data && data.Search && data.Search.length){
+        document.querySelector('#no-searches').classList.add('hidden')
+    }else{
+        document.querySelector('#no-searches').classList.remove('hidden')
+    }
+}
+
+function toggleHiddenWatchlist(watchlist){
+    if(watchlist && watchlist.length){
+        document.querySelector('#no-watchlist').classList.add('hidden')
+    }else{
+        document.querySelector('#no-watchlist').classList.remove('hidden')
+    }
+}

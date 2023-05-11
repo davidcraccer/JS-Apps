@@ -12,13 +12,13 @@
             <img src="/images/background-img.png">
             <h1>Find your film</h1>
             <a class="storage-nav" href="/watchlist.html"><p>My Watchlist</p></a>
-            <div class="search-bar">
+            <form id="search-form" class="search-bar">
                 <input id="search-input" type="text" placeholder="Search for a movie">
-                <button id="search-btn">Search</button>
-            </div>
+                <button type="submit" id="search-btn">Search</button>
+            </form>
         </header>
         
-        <div class="empty-hero hidden">
+        <div class="empty-hero" id="no-searches">
             <img src="/images/film-icon.png" alt="Film icon">
             <h3>Start exploring</h3>
         </div>
